@@ -1,0 +1,89 @@
+<%- include('partials/header.ejs') %> <%- include('partials/backgroundImg.ejs')
+%>
+
+<div class="container text-center my-5">
+  <p>
+    Cocktail recipes are a wonderful thing to have in your culinary armoury. If
+    you can make a frozen margherita or a pina colada on a hot day you’ll put
+    yourself in prime position for most popular person in many a situation, and
+    during the long cold winter months there’s nothing like a glass of something
+    cheery to lift the spirits.
+  </p>
+</div>
+<hr class="double" />
+
+<div class="container mb-5">
+  <h4 class="pb-2">Find your cocktail by name</h4>
+
+  <form action="/findCocktail" method="post" class="text-center">
+    <div class="input-group">
+      <input
+        type="text"
+        class="form-control"
+        name="cocktailName"
+        placeholder="Search for a Cocktail"
+        aria-label="Search for a cocktail"
+      />
+      <button class="btn btn-dark" id="find" name="find" type="submit">
+        Find cocktail
+      </button>
+    </div>
+  </form>
+</div>
+<hr class="double" />
+
+<div class="container text-center my-5">
+  <h2>Our selection of cocktail recipes</h2>
+  <div class="row">
+    <% randomDrinks.forEach((drink)=> { %>
+    <div class="col-sm-12 col-md-6 col-xl-4 my-2">
+      <a href="/drink/<%= drink.idDrink %>" class="link">
+        <img
+          src="<%= drink.strDrinkThumb %>"
+          class="drink-img"
+          alt="<%= drink.strDrink %>"
+        />
+        <h6 class="py-2"><%= drink.strDrink %></h6>
+      </a>
+    </div>
+
+    <% })%>
+  </div>
+</div>
+
+<div class="container mb-5">
+  <h2>Find your cocktail based on spirits</h2>
+  <p>
+    After cocktail containing your favourite spirit? Check these categories.
+  </p>
+  <div class="row d-flex scrolling-row">
+    <% ingredients.forEach(ingredient => {%>
+    <div class="col spirit-category-col">
+      <a href="/ingredient/<%= ingredient %>" class="link">
+        <div class="card spirit-category-card" style="width: 16rem">
+          <img
+            src="/images/<%= ingredient %>.jpg"
+            class="spirit-category-img"
+            alt="..."
+          />
+          <div class="card-body spirit-card-body">
+            <p class="card-text"><%= ingredient %> based cocktails</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <% })%>
+  </div>
+</div>
+
+<div class="container text-center">
+  <h6>Browse Drinks</h6>
+  <% for(let i = 65; i< 90; i++) {%>
+
+  <a href="/browse/<%= String.fromCharCode(i) %>" class="letter-link">
+    <%= String.fromCharCode(i) %>
+  </a>
+  &nbsp; / &nbsp; <% } %>
+</div>
+
+<%- include('partials/footer.ejs') %>

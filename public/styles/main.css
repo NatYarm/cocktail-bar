@@ -1,0 +1,129 @@
+.navbar {
+  background-color: #6abebf;
+}
+.navbar-brand,
+.footer-link,
+.footer-link:hover,
+.footer-link:focus,
+.navbar-brand:hover,
+.navbar-brand:focus {
+  color: #fff;
+}
+
+.img-container {
+  height: 35rem;
+}
+
+.drink-img {
+  width: 350px;
+  height: 300px;
+  padding: 5px;
+}
+
+.drinkList-img {
+  width: 200px;
+  height: 200px;
+  padding: 5px;
+}
+.link {
+  text-decoration: none;
+  color: #383838;
+}
+.link:hover,
+.letter-link:hover {
+  color: #383838;
+}
+
+.letter-link {
+  text-decoration: none;
+  color: #484848;
+}
+
+.ingredients-card {
+  border-radius: 0.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.ingredients-card:hover {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
+}
+.card-header {
+  background-color: #fff;
+  border: none;
+  color: #383838;
+}
+
+.list-group-item {
+  border: none;
+  padding: 2px 16px;
+  color: #484848;
+}
+
+.descr-drink-img {
+  max-width: 80%;
+}
+
+.instructions {
+  max-width: 80%;
+  margin: auto;
+}
+.instruction {
+  list-style-type: none;
+  color: #484848;
+}
+.glass {
+  max-width: 80%;
+  margin: auto;
+}
+.serve {
+  color: #484848;
+}
+
+.scrolling-row {
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  flex: 0 0 auto;
+}
+.spirit-category-img {
+  border-radius: 0.25rem;
+}
+
+.spirit-category-card {
+  border: none;
+  margin-bottom: none;
+}
+
+.spirit-card-body {
+  padding: 16px 0 16px 0;
+}
+
+.page-link {
+  color: #f1607c;
+}
+
+.page-link:hover,
+.page-link:focus,
+.btn-dark:hover,
+.btn-dark:focus {
+  background-color: #ee3c5e;
+  color: #fff;
+}
+.active .page-link,
+.btn-dark {
+  background-color: #f1607c !important;
+  border-color: #f1607c !important;
+}
+
+.message-container {
+  height: 100vh;
+  align-items: center;
+}
+
+footer {
+  background-color: #05364c;
+  color: #fff;
+}

@@ -1,0 +1,26 @@
+<%- include('partials/header.ejs') %> <%- include('partials/backgroundImg.ejs')
+%>
+
+<div class="container text-center my-5">
+  <h2 class="mb-3"><%= ingrName %> cocktail recipes</h2>
+  <p><%= ingredientText[ingrName] %></p>
+  <div class="row cocktail-card">
+    <% drinks.forEach((drink)=> { %>
+    <div class="col-sm-6 col-md-4 col-xl-3 my-2 cocktail-card">
+      <a href="/drink/<%= drink.idDrink %>" class="link">
+        <img
+          src="<%= drink.strDrinkThumb %>"
+          class="drinkList-img"
+          alt="<%= drink.strDrink %>"
+        />
+        <h6 class="py-2"><%= drink.strDrink %></h6>
+      </a>
+    </div>
+
+    <% })%>
+  </div>
+
+  <% if(locals.pageCount && pageCount > 1) { %> <%- include('partials/pagination-nav.ejs') %> <%} %>
+</div>
+
+<%- include('partials/footer.ejs') %>

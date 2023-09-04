@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "axios": "^1.5.0",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "slugify": "^1.6.6"
+  },
+  "name": "cocktailbar",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "module",
+  "[html]": {
+    "editor.formatOnSave": false
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

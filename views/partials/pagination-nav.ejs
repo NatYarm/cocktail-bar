@@ -1,0 +1,26 @@
+
+    <nav>
+      <div class="d-flex justify-content-center my-3">
+        <ul class="pagination pagination-sm" >
+          <li 
+            <% if(currentPage === 1) { %>
+              class="disabled"
+            <% } %>
+          ><a class="page-link" href="?page=<%= currentPage === 1 ? 1 : currentPage - 1 %>">&laquo;</a></li>
+            <% for(let i = 1; i <= pageCount; i++) { %>
+          <li 
+            <% if(currentPage == i) { %>
+              class="active"
+            <% } %>
+          ><a class="page-link" href="?page=<%= i %>"><%= i  %></a></li>
+            <% } %>
+    
+          <li 
+            <% if(currentPage === pageCount) { %>
+              class="disabled"
+            <% } %>
+          ><a class="page-link" href="?page=<%= currentPage > pageCount ? parseInt(pageCount) :  parseInt(currentPage) + 1 %>">&raquo;</a></li>
+        </ul>
+      </div>
+    </nav>
+ 
