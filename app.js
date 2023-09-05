@@ -1,9 +1,9 @@
 import express from 'express';
-import dotenv from 'dotenv';
+import {} from 'dotenv/config';
 import router from './routes/drinksRoutes.js';
 
 const app = express();
-const dotenv = dotenv.config();
+
 const PORT = process.env.PORT || 3000;
 
 app.use(express.static('public'));
