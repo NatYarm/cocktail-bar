@@ -14,7 +14,7 @@ npm install
 node app.js
 
 ## Credits
-The website is built with the public API: CocktailDB API.
+The website is built with the public API: CocktailDB API https://www.thecocktaildb.com/api.php
 
 ## Author
 Natalia Yarmolinskaya
