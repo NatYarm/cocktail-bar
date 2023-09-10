@@ -14,7 +14,7 @@ router.route('/').get(getRandomDrinks);
 router.route('/drink/:idDrink').get(getDrinkById);
 router
   .route('/ingredient/:ingrName')
-  .get(paginateResults(15), getDrinksByIngredient);
+  .get(paginateResults(12), getDrinksByIngredient);
 
 router.route('/findCocktail').post(findCocktailByName);
 router.route('/browse/:letter').get(paginateResults(15), browseByLetter);
